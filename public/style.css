@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#login h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#login input[type="text"],
+#login input[type="password"],
+#login input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#login button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#login button:hover {
+    background-color: #0056b3;
+}
+
+#chat {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+#chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#loggedInUser {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#logoutButton {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoutButton:hover {
+    background-color: #c82333;
+}
+
+#messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#messageContainer {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.messageInputWrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.messageInputWrapper input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.messageInputWrapper button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.messageInputWrapper button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.message.received {
+    justify-content: flex-start;
+}
+
+.message-content {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    text-align: left; /* Không dùng text-align: justify */
+    word-wrap: break-word; /* Đảm bảo văn bản sẽ xuống dòng nếu quá dài */
+}
+
+
+.sent .message-content {
+    background-color: #007bff;
+    color: white;
+    border-top-right-radius: 0;
+}
+
+.received .message-content {
+    background-color: #f1f1f1;
+    color: #333;
+    border-top-left-radius: 0;
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 5px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sent .avatar {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.message .message-time {
+    font-size: 0.8em;
+    color: gray;
+    margin-left: 10px;
+}
+
+#typingIndicator {
+    font-style: italic;
+    color: gray;
+    margin: 10px;
+}
